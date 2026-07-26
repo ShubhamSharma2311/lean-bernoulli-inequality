@@ -10,6 +10,6 @@ namespace Bernoulli
 
 /-- The inductive step: `1 + (k + 1)·x ≤ (1 + k·x)(1 + x)` for `k ≥ 0`. -/
 lemma step {k : ℝ} (hk : 0 ≤ k) (x : ℝ) : 1 + (k + 1) * x ≤ (1 + k * x) * (1 + x) := by
-  sorry
+  nlinarith [mul_nonneg hk (sq_nonneg x)]
 
 end Bernoulli
