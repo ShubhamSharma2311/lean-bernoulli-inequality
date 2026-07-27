@@ -12,4 +12,8 @@ namespace Bernoulli
 lemma step {k : ℝ} (hk : 0 ≤ k) (x : ℝ) : 1 + (k + 1) * x ≤ (1 + k * x) * (1 + x) := by
   nlinarith [mul_nonneg hk (sq_nonneg x)]
 
+/-- **Bernoulli's inequality.** -/
+theorem one_add_mul_le_pow {x : ℝ} (hx : -1 ≤ x) (n : ℕ) : 1 + n * x ≤ (1 + x) ^ n := by
+  sorry
+
 end Bernoulli
