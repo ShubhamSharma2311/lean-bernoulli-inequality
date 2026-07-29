@@ -24,7 +24,7 @@ theorem one_add_mul_le_pow {x : ℝ} (hx : -1 ≤ x) (n : ℕ) : 1 + n * x ≤ (
       _ = (1 + x) ^ (k + 1) := (pow_succ _ _).symm
 
 /-- The common special case `0 ≤ x`. -/
-theorem one_add_mul_le_pow_of_nonneg {x : ℝ} (hx : 0 ≤ x) (n : ℕ) : 1 + n * x ≤ (1 + x) ^ n := by
-  sorry
+theorem one_add_mul_le_pow_of_nonneg {x : ℝ} (hx : 0 ≤ x) (n : ℕ) : 1 + n * x ≤ (1 + x) ^ n :=
+  one_add_mul_le_pow (by linarith) n
 
 end Bernoulli
