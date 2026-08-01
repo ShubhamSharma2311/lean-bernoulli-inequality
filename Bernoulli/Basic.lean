@@ -29,6 +29,8 @@ theorem one_add_mul_le_pow_of_nonneg {x : ℝ} (hx : 0 ≤ x) (n : ℕ) : 1 + n 
 
 /-- Natural-number form at `x = 1`: `n + 1 ≤ 2ⁿ`. -/
 theorem succ_le_two_pow (n : ℕ) : n + 1 ≤ 2 ^ n := by
-  sorry
+  induction n with
+  | zero => simp
+  | succ k ih => rw [pow_succ]; omega
 
 end Bernoulli
